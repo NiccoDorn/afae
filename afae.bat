@@ -1,5 +1,6 @@
 @echo off
 cd /d "%~dp0afae"
 call setup_python.bat
-python3 ./pyscripts/main.py
+cd /d "%~dp0afae"
+python ./pyscripts/main.py
 pause

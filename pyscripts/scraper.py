@@ -44,7 +44,7 @@ def scrapeHtml(kurs_link: str, kurs_nummer: str):
         response = r.get(kurs_link, timeout=5)
         html = bs(response.text, 'html.parser')
         tds = html.find_all("td")
-        data = {"Kurs-Id": kurs_nummer.replace("/"), "Kursname": kurs_link.split("/")[-1]}
+        data = {"Kurs-Id": kurs_nummer.replace("/", ""), "Kursname": kurs_link.split("/")[-1]}
         keys = ['Status', 'Beginn', 'Dauer', 'Kursgebühr', 'Kursleitung', 'Anmeldung']
         for i in range(0, len(tds), 2):
             key = tds[i].get_text(strip=False)
