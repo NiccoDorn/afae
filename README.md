@@ -1,9 +1,9 @@
 ## Ausführung
  + Doppelklicken auf die **afae.bat** Datei: Kümmert sich um Setup und Programmausführung
- + Sofern eine funktionierende Python-Installation und die notwenigen Modules bereits da sin, kann **main.py** direct ausgeführt werden.
+ + Sofern Python funktioniert und die notwenigen Modules existieren, kann **main.py** direkt ausgeführt werden.
 
 ## Setup
-### **install_python.bat**: 
+### **install_python.bat**:
 - Installiert Python, setzt die PATH-Variable und installiert die notwendigen Python-Module.
 - Benutzt **requirements.txt** um benötigte Python Module nachzuschauen.
 
