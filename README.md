@@ -1,11 +1,13 @@
 ## Ausführung
  + Doppelklicken auf die **afae.bat** Datei: Kümmert sich um Setup und Programmausführung
+ + Sofern eine funktionierende Python-Installation und die notwenigen Modules bereits da sin, kann **main.py** direct ausgeführt werden.
 
 ## Setup
 ### **install_python.bat**: 
 - Installiert Python, setzt die PATH-Variable und installiert die notwendigen Python-Module.
+- Benutzt **requirements.txt** um benötigte Python Module nachzuschauen.
 
-## Scripts
+## Scripts in /pyscripts
 ### 1. **main.py** 
 Enthält die abstrakte Programm-Logik:
 - **Modi**:
@@ -28,9 +30,10 @@ Stellt eine Fensteranwendung bereit:
 - **Hinweis**:
     - Nicht entscheidend für die Kernfunktionalität. Falls gelöscht, sollte der Aufruf `startGui()` in der `main.py` entweder entfernt oder auskommentiert und durch `pass` ersetzt werden.
 
-## Dateien
-- **requirements.txt**: Wichtig für das Setup. Enthält eine Liste der benötigten Python-Module
+## Dateien in /data
 - **afae-alle-kurse.txt**: Enthält alle gesammelten Kurslinks der Website.
 - **afae-kurse.json**: Enthält die *Kursinformationen* zu den gesammelten Kurslinks.
+
+## Dateien in /misc
 - **afae-icon.ico**: Wird als Icon im Fensterprogramm verwendet.
 - **afae-background.jpg**: Hintergrundbild für das Fensterprogramm.
