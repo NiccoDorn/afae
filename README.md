@@ -1,5 +1,5 @@
 ## Ausführung
- + Doppelklicken auf die **afae.bat** Datei: Kümmert sich um Setup und Programmausführung
+ + Doppelklicken auf die **afae.bat** Datei: Kümmert sich um Setup und Programmausführung, muss auf Gerät erlaubt werden.
  + Sofern Python funktioniert und die notwenigen Modules existieren, kann **main.py** direkt ausgeführt werden.
 
 ## Setup
