@@ -25,7 +25,7 @@ def main():
     # INFO
     print("\nPROGRAMM GESTARTET.\n")
     print("Update der Kurs-Links, das kann eine Minute dauern...")    # Ab und zu afae-alle-kurse.txt aktualisieren
-    #sammleAlleKursLinks(BEREICHE)                                                      # Um das zu tun, einfach das "#"
+    #sammleAlleKursLinks(BEREICHE)                                    # Um das zu tun, einfach das "#" entfernen
     print("Kurslinks-Datei updated.\n")                               # ganz vorne löschen
     
     print("INFO: Option A bedeutet: Alle Links aus 'afae-alle-kurse.txt' automatisch abgehen und Kursdaten sammeln.")
