@@ -22,14 +22,16 @@ BEREICHE = [
 ]
 
 def main():
-    # INFO
+    # Optionales Sammeln der Kurslinks und Information
     print("\nPROGRAMM GESTARTET.\n")
-    print("Update der Kurs-Links, das kann eine Minute dauern...")    # Ab und zu afae-alle-kurse.txt aktualisieren
-    #sammleAlleKursLinks(BEREICHE)                                    # Um das zu tun, einfach das "#" entfernen
-    print("Kurslinks-Datei updated.\n")                               # ganz vorne löschen
+    c = input("Alle Kurslinks sammeln? Das kann eine Minute dauern. [ja/nein]: ")
+    if c in ["j", "ja", "Ja", "JA"]:
+        sammleAlleKursLinks(BEREICHE)                                   
+        print("Kurslinks-Datei updated.\n")                               # ganz vorne löschen
     
     print("INFO: Option A bedeutet: Alle Links aus 'afae-alle-kurse.txt' automatisch abgehen und Kursdaten sammeln.")
-    print("Die neuen Kurs-Daten werden in eine Datei 'kurse.json' geschrieben.\n")
+    print("INFO: Die neuen Kurs-Daten werden in eine Datei 'kurse.json' geschrieben.")
+    print("INFO: Danach kann man mit Steuerung+F in der kurse.json nach den Kurs-Ids suchen.\n")
     script_dir = os.path.dirname(os.path.abspath(__file__))
     
     # Programm-Ablauf

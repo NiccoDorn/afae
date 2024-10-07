@@ -27,10 +27,14 @@ def kursbereich_anfrage(bereich_link: str):
 
 def sammleAlleKursLinks(bereiche: list[str]):
     alle_kurs_links = []
+    i = 1
     for bereich in bereiche:
         links = kursbereich_anfrage(bereich)
         kurs_links = set([re.sub(r'/kategorie-id/\d+', '', link) for link in links if "/programm/" in link])
         alle_kurs_links += kurs_links
+        print(f"Kurslinks für {i}/8 Bereiche gesammelt.", end="\r")
+    
+        i += 1
     alle_kurs_links = set(alle_kurs_links)
     
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -38,6 +42,7 @@ def sammleAlleKursLinks(bereiche: list[str]):
     with open(kursliste_path, 'w+') as wf:
         wf.writelines(f"{kurs}\n" for kurs in alle_kurs_links)
     wf.close()
+    print()
 
 def scrapeHtml(kurs_link: str, kurs_nummer: str):
     try:
