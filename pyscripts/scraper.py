@@ -93,6 +93,7 @@ def findeKursDetailsMitKursNummer(kurs_nummer: str):
 
 def handle_scrape_response(data):
     if data not in ["ConnectionError", "TimeoutError"]:
-        result = "\n".join([f"{key}: {value}" for key, value in data.items()])
-        return result
+        # print(type(data))
+        # result = "\n".join([f"{key}: {value}" for key, value in data.items()])
+        return data
     return f"Verbindung nicht möglich für Kursnummer."

@@ -9,9 +9,12 @@ from scraper import findeKursDetailsMitKursNummer
 def triggerSearch(event=None):
     kurs_nummer = entry.get()
     if kurs_nummer:
-        ergebnis = findeKursDetailsMitKursNummer(kurs_nummer)   # rufe Logik-Funktion auf
-        output_label.config(text=ergebnis)                      # packe Ergebnis ins Output-Fenster
-        print("\n"+ergebnis+"\n")                                    # Zusätzlich Ausgabe im Terminal
+        ergebnis = findeKursDetailsMitKursNummer(kurs_nummer)       # rufe Logik-Funktion auf
+        kurs_infos = "\n".join([f"{key}: {value}" for key, value in ergebnis.items()])
+        output_label.config(text=kurs_infos)                        # packe Ergebnis ins Output-Fenster
+        kursId = ergebnis["Kurs-Id"].replace("/", "").replace("242-", "")
+        reihenfolge = [kursId, ergebnis["Kursname"], ergebnis["Kursleitung"], ergebnis["Beginn"]]
+        print(", ".join(reihenfolge))                               # Ausgabe im gewünschten Format im Terminal
 
 """ Fensterprogramm Layout """
 def startGui():

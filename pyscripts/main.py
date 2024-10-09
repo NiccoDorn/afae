@@ -68,7 +68,11 @@ def main():
             while True:
                 kurs_nummer = input("Bitte geben Sie eine Kurs-Id an: ")
                 kurs_infos = findeKursDetailsMitKursNummer(kurs_nummer)
-                print("\n"+ kurs_infos + "\n")
+                # Strukturierung im gewünschten Format
+                kursId = kurs_infos["Kurs-Id"].replace("/", "").replace("242-", "")
+                reihenfolge = [kursId, kurs_infos["Kursname"], kurs_infos["Kursleitung"], kurs_infos["Beginn"]]
+                print("\n", ", ".join(reihenfolge), "\n")                               # Ausgabe im gewünschten Format im Terminal
+                
                 weiter = input("Möchten sie weitere Kurs-Ids abrufen? [ja/nein]: ")
                 if weiter.lower() not in ["j", "ja", "ha", "ka"]:
                     break
